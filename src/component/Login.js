@@ -11,10 +11,11 @@ export default function Login() {
   };
   return (
     <>
-      <div className="background">
-        <div className="login-right">
+      <div className="row back-image">
+        {" "}
+        <div className="col-6 w-100">
           <Form
-            className="loginForm"
+            className="loginForm col-6"
             name="basic"
             labelCol={{
               span: 8,
