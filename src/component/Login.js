@@ -1,9 +1,23 @@
 import React from "react";
-import { Form, Input, Button, Checkbox } from "antd";
+import { Form, Input, Button } from "antd";
 import "../style/login.css";
 export default function Login() {
   const onFinish = (values) => {
     console.log("Success:", values);
+  };
+
+  const loginUser = async (credentials) => {
+    return await fetch("http://52.221.191.153/admin/login	", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(credentials),
+    })
+      .then((res) => res.json())
+      .then((res) => {
+        alert(res.status);
+      });
   };
 
   const onFinishFailed = (errorInfo) => {
