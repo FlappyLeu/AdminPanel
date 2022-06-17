@@ -3,7 +3,7 @@
 .back-image {
   background-image: url(/src/pictures/images/login-background1.png) !important;
   background-size: 50vw;
-  width: 100%;
+  width: 100vw;
   height: 100vh;
 }
 .loginForm {
